@@ -1,0 +1,364 @@
+*{
+    box-sizing: border-box;
+    /*font-family: 'Questrial', sans-serif;*/
+    font-family: 'Maven Pro', sans-serif;
+    color: rgb(119, 97, 101);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 10px 200px 100px 100px 100px 100vh 50px ;
+    grid-template-areas: 
+        "n n n n n n n"  
+        "h h h h h h h"
+        "m c c c c a a"
+        "m c c c c a a"
+        "m c c c c a a"
+        "m c c c c a a"
+        "f f f f f f f";
+         
+}
+.header {
+    grid-area: h;
+    background-color: rgb(119, 97, 101);
+    border-bottom: dotted 1px rgb(143, 163, 182);
+    border-radius: 1%;
+    color: rgb(250, 244, 245);
+}
+.headerimg{
+    height: 80%;
+    float: left;
+    margin: 3.5% 3% -6% 3%;
+    border-radius: 50%;
+   
+}
+h1 {
+    font-size: 52px;
+    text-align: center;
+    padding: 5%;
+   
+}
+.navbar {
+    grid-area: n;
+    background-color: rgb(250, 244, 245);
+    border-radius: 1%;
+    font-size: 20px;
+   
+    
+    
+}
+.nav {
+    color: rgb(92, 42, 6);
+}
+ul {
+    list-style-type: none;
+    display: inline;
+}
+
+
+.menu {
+    grid-area: m;
+    width: 100%;
+    padding-left: 10%;
+    background-color: rgb(250, 244, 245);
+    padding-top: 40px;
+}
+.menu-mini{
+    display: none;
+    background-color: rgb(250, 244, 245);
+}
+
+.count{
+    margin-left: 5%;
+    width: 100%;
+    line-height: 20px;
+    font-size: 14px;
+    color: rgb(92, 42, 6);
+    text-align: center;
+    
+}
+
+.content {
+    grid-area: c;
+    background-color: rgb(250, 244, 245);
+    padding-top: 5%;
+    overflow: scroll;
+
+}
+p {
+    
+    padding: 5%;
+}
+.contentimg {
+    width: 80%;
+    border-radius: 90%;
+    float: center;
+    margin-left: 10%;
+}
+
+
+.footer {
+    grid-area: f;
+    width: 100%;
+    background-color: rgb(119, 97, 101);
+    color: rgb(250, 244, 245);
+    text-align: center;
+    padding-top: 20px;
+    bottom: 0; 
+}
+.about {
+    grid-area: a;
+    background-color: rgb(250, 244, 245);
+    overflow: scroll;
+    padding-top: 20%;
+
+}
+.aboutimg {
+    width: 60%;
+    float: left;
+}
+
+.bottom {
+    margin: 1%;
+    color: rgb(250, 244, 245);
+}
+.address {
+    padding-right: 30px;
+}
+/*   Start of Gallery Page */
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 150px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 100px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+.imgcont {
+    width: 300px;
+    height: 200px;
+   
+    margin-top: 575px;
+}
+.viewer {
+    width: 600px;
+    height: 400px;
+    margin-left: 25px;
+}
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* start of the getinvolved page */
+form {
+    width: 95%;
+    border: solid 2px rgb(119, 97, 101);
+    margin-bottom: 50px;
+
+}
+input {
+    width: 80%;
+    height: 50px;
+    margin: 5% .4em 5% 5%;
+}
+.involved {
+   
+    text-align: left;
+    
+}
+
+.involved-img {
+    width: 60%;
+    border-radius: 90%;
+    float: left;
+}
+button {
+    background-color: rgb(119, 97, 101);
+    color: rgb(250, 244, 245);
+    border-radius: 10%;
+}
+.blogimg {
+    width: 40%;
+    border-radius: 90%;
+    float: left;
+    
+}
+
+@media(max-width: 900px){
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows:  25px 150px 300px 300px 100px 100px 50px;
+       grid-template-areas: 
+        "n n n n"
+        "h h h h"
+        "c c c c"
+        "c c c c"
+        "a a a a"
+        "a a a a"
+        "f f f f"
+        
+    } 
+    .header {
+        grid-area: h;
+    }
+    .headerimg{
+        height: 40%;
+        margin-top: 20%;
+    }
+    h1 {
+        font-size: 20px;
+        margin-top: 20%;
+    }
+    .navbar {
+        grid-area: n;
+        font-size: 12px;
+    }
+   .menu {
+        
+        display: none;
+        
+    }
+    .menu-mini{
+        display: none;
+        grid-area: m;
+        color: rgb(92, 42, 6);
+        background-color:  rgb(250, 244, 245);
+        overflow: scroll;
+        padding: 0;
+        margin: 0;
+    }
+   .content {
+        grid-area: c;
+     
+        overflow: scroll;
+    
+    }
+   
+    .contentimg {
+        width: 40%;
+        
+    }
+    
+    
+    .footer {
+        grid-area: f;
+        width: 100%;
+        background-color: rgb(119, 97, 101);
+        color: rgb(250, 244, 245);
+        text-align: center;
+        padding-top: 10px;
+        bottom: 0; 
+    }
+    .about {
+        grid-area: a;
+        border: solid 1px  rgb(119, 97, 101);
+        overflow: scroll;
+        margin: 0;
+        padding: 0;
+       
+    
+    }
+    .aboutimg {
+        width: 30%;
+        float: left;
+        
+        
+    }
+   
+   
+   
+    /*   Start of Gallery Page */
+    
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 150px;
+    }
+    
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+    
+    div.gallery img {
+        width: 100%;
+        height: 100px;
+    }
+    
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+    .imgcont {
+       display: none;
+    }
+    .viewer {
+        width: 600px;
+        height: 400px;
+        margin-left: 25px;
+    }
+    .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    
+    /* start of the getinvolved page */
+    form {
+        width: 95%;
+        border: solid 2px rgb(119, 97, 101);
+        margin-bottom: 50px;
+    
+    }
+    input {
+        width: 80%;
+        height: 50px;
+        margin: 5% .4em 5% 5%;
+    }
+    .involved {
+       
+        text-align: left;
+        
+    }
+    
+    .involved-img {
+        width: 60%;
+        border-radius: 90%;
+        float: left;
+    }
+    button {
+        background-color: rgb(119, 97, 101);
+        color: rgb(250, 244, 245);
+        border-radius: 10%;
+    }
+    .blogimg {
+        width: 40%;
+        border-radius: 90%;
+        float: left;
+        
+    }
+    
+    
+
+} 
